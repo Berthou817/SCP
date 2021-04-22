@@ -68,6 +68,8 @@ for epoch in range(epochs):
     train_acc_G = 0
     num_correct_G = 0
     num_correct_DS = 0
+    netG.train()
+    netD.train()
     for data_HR, data_LR, data_S in zip(HR_train_loader, LR_train_loader, S_train_loader):
         i+=1
 
